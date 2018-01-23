@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>barcode</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- <ion-item text-center> -->
+  <svg #barcode id="barcode"></svg>
+
+  <!-- </ion-item> -->
+
+  <ion-item>
+    <ion-label fixed>barcode:</ion-label>
+    <ion-input type="text" [(ngModel)]="text"> </ion-input>
+  </ion-item>
+  <br>
+  <button ion-button full icon-left (click)="genBarcode()">
+    <ion-icon name="code-working"></ion-icon>
+    genBarcode
+  </button>
+
+  <br>
+
+  <ion-item>
+    <ion-label fixed>QRCode:</ion-label>
+    <ion-input type="url" [(ngModel)]="qrData"></ion-input>
+  </ion-item>
+
+  <button ion-button full icon-left (click)="createQRCode()"> 
+    <ion-icon name="barcode"></ion-icon> 
+    Create QRCode 
+  </button> 
+ 
+  <ion-card *ngIf="createdQRCode"> 
+    <ion-card-content> 
+      <p>QRData: {{ createdQRCode }}</p> 
+    </ion-card-content> 
+    <ngx-qrcode [qrc-value]="createdQRCode"> </ngx-qrcode> 
+  </ion-card> 
+
+  <br>
+
+
+</ion-content>

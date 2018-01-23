@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>POC Printer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  Bluetooth Device
+  <ion-list *ngFor="let printer of printerList">
+    <button ion-item (click)="connectPrinter(printer)">
+      {{ printer }}
+    </button>
+  </ion-list>
+
+  <button ion-button block (click)="listPrinter()">
+    check
+  </button>
+  <button ion-button block color="danger" (click)="disconnectPrinter()">
+    disconnect Printer
+  </button>
+  bill doc
+  <button ion-button block (click)="printA()">ใบเสร็จรับเงิน/ใบกำกับภาษี สด</button>
+  <button ion-button block (click)="printB()">ใบเสร็จรับเงิน/ใบกำกับภาษี(ย่อ) สด</button>
+  <button ion-button block (click)="printC()">ใบส่งสินค้า/ใบกำกับภาษี เซ็น</button>
+  <button ion-button block (click)="printD()">ใบส่งสินค้า/ใบกำกับภาษี(ย่อ) เซ็น</button>
+  <button ion-button block (click)="printE()">ใบส่งสินค้า/ใบกำกับภาษี(ย่อ) สด</button>
+  stock doc
+  <button ion-button block (click)="printF51()">
+    Print F51
+  </button>
+  <button ion-button block (click)="printF52()">
+    Print F52
+  </button>
+  <button ion-button block (click)="printStockSummary()">
+    Print Stock Summary
+  </button>
+  <!-- <button (click)="download('file text', 'myfilename.txt', 'text/plain')">Create file</button>
+  <a href="" id="a">click here to download your file</a> -->
+  Barcode Section
+  <button ion-button block (click)="createFileBarcode()">
+    Create Barcode
+  </button>
+  QRcode Section
+  <button ion-button block (click)="createQRcode()">
+    Create QRcode
+  </button>
+  <br>
+  <br>
+  <button ion-button block (click)="printFile()">
+    Print File
+  </button>
+
+</ion-content>

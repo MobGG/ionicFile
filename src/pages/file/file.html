@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> {{ 'HELLO' | translate }} </ion-title>
+    <ion-title> HELLO </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button (click)="setLang('en')"> en </button>
+  <button ion-button (click)="setLang('es')"> es </button>
+  <button ion-button (click)="setLang('th')"> th </button>
+
+
+  <!-- <button ion-button block (click)="checkDir()">check dir</button>
+  <button ion-button block (click)="checkFile()">check file</button>
+  <button ion-button block (click)="createTextFile()">create file</button>
+  <button ion-button block (click)="createEmptyFile()">create empty file</button>
+  <button ion-button block (click)="testRemove()">test delete file</button>
+  <br> -->
+  <!-- <button ion-button block (click)="gotoPrintSPC()">Start PrintSPC</button> -->
+  <!-- <br> -->
+  
+  <!-- <button ion-button block large (click)="printA()">ใบเสร็จรับเงิน/ใบกำกับภาษี สด</button>
+  <br>
+  <button ion-button block large (click)="printB()">ใบเสร็จรับเงิน/ใบกำกับภาษี(ย่อ) สด</button>
+  <br>
+  <button ion-button block large (click)="printC()">ใบส่งสินค้า/ใบกำกับภาษี เซ็น</button>
+  <br>
+  <button ion-button block large (click)="printD()">ใบส่งสินค้า/ใบกำกับภาษี(ย่อ) เซ็น</button>
+  <br>
+  <button ion-button block large (click)="printE()">ใบส่งสินค้า/ใบกำกับภาษี(ย่อ) สด</button>
+  <br> -->
+
+  <button ion-button block large (click)="testFunc()"> test func </button>
+  <br>
+  <button ion-button block large (click)="goToPrinter()"> Printer Page </button>
+  <br>
+  <button ion-button block large (click)="goToBarcodePage()"> genBarcode </button>
+
+</ion-content>
